@@ -2,10 +2,13 @@ from utils.core import create_sessions
 from utils.telegram import Accounts
 from utils.cubes import Start
 import asyncio
+import argparse
 
 
 async def main():
-    action = int(input("Выберите действие:\n1. Начать майнинг кубов\n2. Создать сессию (сессии)\n\n> "))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-a', '--action', type=int, help='Action to perform')
+    action = parser.parse_args().action
 
     if action == 2:
         await create_sessions()
