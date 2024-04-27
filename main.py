@@ -7,8 +7,6 @@ import asyncio
 async def main():
     action = int(input("Выберите действие:\n1. Начать майнинг кубов\n2. Создать сессию (сессии)\n\n> "))
 
-
-
     if action == 2:
         await create_sessions()
 
