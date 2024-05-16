@@ -10,10 +10,10 @@ async def main():
     parser.add_argument('-a', '--action', type=int, help='Action to perform')
     action = parser.parse_args().action
 
-    if action == 2:
+    if action == 1:
         await create_sessions()
 
-    if action == 1:
+    if action == 2:
         accounts = await Accounts().get_accounts()
 
         tasks = []
